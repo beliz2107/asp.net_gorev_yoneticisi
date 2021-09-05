@@ -1,0 +1,37 @@
+﻿@model IEnumerable<_asp.net_gorev_yonetici.Models.GorevModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Görev Listesi</h2>
+<div class="row">
+    <div class="col-md-8">
+
+        @foreach (var gorev in Model)
+        {
+        <div class="gorev">
+            <h3 class="page-header">
+                @gorev.Baslik
+            </h3>
+            <p>
+                <span class="glyphicon glyphicon-time"></span>
+                @gorev.EklenmeTarihi
+            </p>
+            <hr />
+            <p>
+                @gorev.Aciklama
+            </p>
+            <button class="btn btn-primary">Daha Fazla...</button>
+        </div>
+        }
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    
+</div>
+
+{
+    
+}
+
